@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <meta name="author" content="Dayron Florez y Camilo Espitia">
+  <meta name="description" content="Pagina web de mi proyecto integrador, correspondiente a la asignatura de fundamentos de ingeniería y pensamiento algorítmico, ingeniería mecatronica, Universidad de Cundinamarca">
+
+  <meta name="keywords" content="Glosario, ingeniería, Mecatronica, Ingeniería, Sistemas, Unicoc">
+  <title>CONTACTENOS</title>
+
+  <link rel="stylesheet" href="css/estilos.css">
+   <script src="js/error.js" defer></script>
+	<script src="js/reset.js" defer></script>
+</head>
+
+<body>
+
+<header> 
+      <img src="imagenes/logo.png">    
+      <h1>MI PROYECTO INTEGRADOR</h1>
+      <h2>Por:  Dayron Nicolas Florez Gómez,
+	Daniel Camilo Espitia Parra </h2> 
+      <br><hr><br>
+</header>
+
+<nav>
+<ul>
+     	<li><a href="index.html">Inicio</a></li>
+     	<li><a href="Proyecto.html">Proyecto</a></li>
+     	<li><a href="Glosario Fundamentos de Ingenieria.html">Glosario F.Ingeniería</a></li>
+     	<li><a href="Glosario Pensamiento Algoritmico.html">Glosario P.Algorítmico</a></li>
+	<li><a href="Validador de datos.html">Contactenos</a></li>
+</ul>
+</nav>
+<br>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejercicios para validación de datos en formularios HTML">
+    <meta name="keywords" content="validar campos, expresiones regulares, formularios, JavaScript">
+    <title>Ejercicio Validador de Datos</title>
+    
+    <style>
+     
+        label {
+            color: maroon;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        fieldset {
+	
+	    text-align: center;        
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        legend {
+	    
+	   
+            font-weight: bold;
+            color: maroon;
+        }
+        button, input[type="submit"], input[type="button"] {
+            
+	    text-align: center;        
+	    background-color: maroon;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+	    
+	    text-align: center;        
+            background-color: darkred;
+        }
+       
+    </style>
+    
+    	<script src="js/error.js" defer></script>
+	<script src="js/reset.js" defer></script>
+	<script src="js/mensaje.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><b>CONTÁCTENOS</b></h1>
+        
+    </header>
+
+    <main>
+       <form name="miniformulario" method="GET" onsubmit="return validarDatos()" action="Validador de datos.html">
+   
+        
+	
+            <fieldset>
+                <legend>Datos Personales</legend>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+                <label for="apellido">Apellidos</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" min="10" max="100" required>
+
+                <label for="fecha">Fecha de nacimiento</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información de Contacto</legend>
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+
+                <label for="telefono">Número Telefónico</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Mínimo 7 dígitos" pattern="\d{7,}" required>
+
+                <label for="tipo_telefono">Tipo de Teléfono</label>
+                <select name="tipo_telefono" id="tipo_telefono" required>
+                    <option value="" hidden>Selecciona una opción</option>
+                    <option value="celular">Celular</option>
+                    <option value="casa">Casa</option>
+                    <option value="trabajo">Trabajo</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información Adicional</legend>
+
+                <label>Género</label>
+                <div>
+			<label for="genF">Femenino</label>
+                    	<input type="radio" id="genF" name="genero" value="F">
+                    
+                </div>
+                <div>
+			<label for="genM">Masculino</label>                    
+			<input type="radio" id="genM" name="genero" value="M">
+                    
+                </div>
+                <div>
+                    	<label for="genO">Otro</label>
+			<input type="radio" id="genO" name="genero" value="O">
+                   
+                </div>
+
+                <label for="mensaje">Comentarios o sugerencias</label>
+                <textarea id="mensaje" name="mensaje" rows="5" maxlength="1000" placeholder="Escribe tu mensaje (máximo 1000 caracteres)"></textarea>
+
+                <div>
+                    <input type="checkbox" id="autoriza" name="autoriza" required>
+                    <label for="autoriza">Acepto el tratamiento de mis datos</label>
+                </div>
+            
+
+            <div>
+
+            </div>
+
+	
+
+	<input type="submit" value="Enviar">
+        <input type="button" value="Reiniciar datos" onclick="resetearDatos()">
+
+	</fieldset>
+
+        </form>
+
+       
+    </main>
+</body>
+</html>
